@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"sync"
 )
 
@@ -43,12 +42,9 @@ func findMedianSortedArrays(nums1, nums2 []int) float64 {
 		}
 	}
 
-	fmt.Printf("Nums is: %v\n", nums)
 	median := float64(nums[len(nums)/2])
-	fmt.Println("Median 1 is:", median)
 
 	if len(nums)%2 == 0 {
-		fmt.Println("Median 2 is:", float64(nums[(len(nums)/2)-1]))
 		median = (median + float64(nums[(len(nums)/2)-1])) / 2
 	}
 
